@@ -93,7 +93,9 @@ def all_holidays_with_bbq(holiday_hash)
     
     value.collect { |k,v|
          if (v.include?("BBQ") == true)
-            a << (k.to_sym)
+           # stops weirdness with colons and having 
+           # quotes in the array
+            a << (k.to_sym) 
          end
         }
   }
